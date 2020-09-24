@@ -1,0 +1,22 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "notes app with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankit98040/Notes-app.git"
+  },
+  "author": "Ankit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankit98040/Notes-app/issues"
+  },
+  "homepage": "https://github.com/ankit98040/Notes-app#readme",
+  "dependencies": {
+    "yargs": "^16.0.3"
+  }
+}
