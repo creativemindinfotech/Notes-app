@@ -20,7 +20,7 @@ yargs.command({
             type:'string'
         }
     },
-    handler: function () {
+    handler() {
         notes.addNote(argv.title, argv.body)
     }
 })
@@ -30,29 +30,38 @@ yargs.command({
     describe: 'removing a note',
     builder: {
         title: {
-            describe:'note title',
-            demandOption: true,
-            type: 'string'
+            title: {
+                describe: 'Note title',
+                demandOption: true,
+                type: 'string'
+            }
         }
     },
-    handler: function (argv) {
-        console.log('Ankit removes a note', argv)
+    handler(argv) {
+        notes.removeNote(argv.title)
     }
 })
 
 yargs.command({
     command: 'read',
     describe: 'reading note',
-    handler: function () {
-        console.log('Ankit reads a note')
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler(argv) {
+        notes.readNote(argv.title)
     }
 })
 
 yargs.command({
     command: 'list',
     describe: 'listing  note',
-    handler: function () {
-        console.log('Ankit listss all note')
+    handler() {
+        notes.listNotes()
     }
 })
 

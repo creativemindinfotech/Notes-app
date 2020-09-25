@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ankit98040/Notes-app#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "yargs": "^16.0.3"
   }
 }
